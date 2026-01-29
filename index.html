@@ -1,119 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Harietta's Cafe</title>
-</head>
-<body>
-    <header class="pm-header">
-    <div class="pm-header__inner">
-      <a class="pm-logo" href="#" aria-label="Henrietta's Cafe home">
-        <img src="logo.svg" alt="Henrietta's Cafe" />
-      </a>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+		<title>Harietta's Cafe</title>
+	</head>
+	<body>
+		<header class="pm-header">
+			<div class="pm-header__inner">
+				<a
+					class="pm-logo"
+					aria-label="Henrietta's Cafe home"
+				>
+					<img
+						src="./assets/logo.svg"
+						alt="Henrietta's Cafe"
+					/>
+				</a>
 
-      <nav class="pm-nav" aria-label="Primary">
-        <a class="pm-nav__link" href="#menu">Order Now</a>
-        <a class="pm-nav__link" href="#catering">Catering</a>
-        <a class="pm-nav__link" href="#location">Location</a>
-      </nav>
+				<nav
+					class="pm-nav"
+					aria-label="Primary"
+				>
+					<a
+						class="pm-btn pm-btn--primary"
+						href="#catering"
+						>Order now</a
+					>
+					<a
+						class="pm-btn pm-btn--primary"
+						href="#order"
+						>Cataring</a
+					>
+					<a
+						class="pm-btn pm-btn--primary"
+						href="#order"
+						>About</a
+					>
+				</nav>
+			</div>
+		</header>
 
-      <div class="pm-header__actions">
-        <a class="pm-btn pm-btn--ghost" href="#catering">Breakfast Catering</a>
-        <a class="pm-btn pm-btn--primary" href="#order">Order Online</a>
-      </div>
-  </div>
-</header>
+		<main class="pm-main">
+			<section
+				class="pm-hero pm-hero--bg"
+				id="order"
+			>
+				<div class="pm-hero__content">
+					<h1 class="pm-hero__title">Welcome to</h1>
+					<h1 class="pm-hero__title">Welcome to Henrietta’s Cafe</h1>
+					<p class="pm-hero__sub">
+						Coffee, baked goods, and light bites. Pick up at the counter in
+						minutes.
+					</p>
 
-<main class="pm-main">
-  <section class="pm-hero" id="order">
-    <div class="pm-hero__content">
-      <h1 class="pm-hero__title">Fresh coffee, baked daily. Order ahead.</h1>
-      <p class="pm-hero__sub">
-        Breakfast and lunch in the heart of Cape May. Pickup at the counter or order online in minutes.
-      </p>
-      <div class="pm-hero__ctas">
-        <a class="pm-btn pm-btn--primary" href="#">Start an Order</a>
-        <a class="pm-btn pm-btn--ghost" href="#catering">Breakfast Catering</a>
-      </div>
-      <ul class="pm-hero__meta">
-        <li>Counter pickup</li>
-        <li>Fast ordering</li>
-        <li>Cape May, NJ</li>
-      </ul>
-    </div>
+					<div class="pm-hero__ctas">
+						<h2 class="pm-hero__sub">Delicious Food in Charming Cape, NJ</h2>
+						<a
+							class="pm-btn pm-btn--primary"
+							href="#"
+							>Order Online</a
+						>
+					</div>
+				</div>
+			</section>
 
-    <div class="pm-hero__media" role="img" aria-label="Coffee and pastries on a bright morning table"></div>
-  </section>
+			<section
+				class="pm-section pm-featured"
+				id="menu"
+			>
+				<div class="pm-featured-content">
+					<h1 class="pm-section__title">Breakfast and Lunch Favorites</h1>
+					<h3 class="pm-section__subtitle">
+						Start your morning with fresh-baked pastries and a coffee that
+						actually tastes like coffee. Swing back at lunch for light bites
+						that feel satisfying without slowing you down.
+					</h3>
 
-  <section class="pm-section pm-featured" id="menu">
-    <div class="pm-section__head">
-      <h2 class="pm-section__title">Popular right now</h2>
-      <a class="pm-link" href="#">View full menu</a>
-    </div>
+					<div class="pm-menu">
+						<img
+							src="./assets/img1.svg"
+							aria-label="delicious food"
+						/>
+						<img
+							src="./assets/img2.svg"
+							aria-label="delicious food"
+						/>
+						<img
+							src="./assets/img3.svg"
+							aria-label="delicious food"
+						/>
+						<img
+							src="./assets/img4.svg"
+							aria-label="delicious food"
+						/>
+					</div>
+				</div>
+			</section>
 
-    <div class="pm-grid pm-grid--cards">
-      <article class="pm-card">
-        <h3 class="pm-card__title">Almond Croissant</h3>
-        <p class="pm-card__desc">Buttery layers, toasted almonds, light vanilla glaze.</p>
-        <p class="pm-card__price">$5.50</p>
-      </article>
+			<section class="pm-section pm-about">
+				<h1>Love in our coffee</h1>
+				<div class="pm-about-content">
+					<div>
+						<img src="./assets/aboutUs.svg" />
+					</div>
+					<div class="pm-about-content-text">
+						<h6>
+							We keep it simple and obsess over the details: smooth espresso,
+							balanced brews, and seasonal specials that taste like Cape May
+							mornings. Whether you’re grabbing a quick pickup or lingering for
+							a moment, you’ll feel the difference.
+						</h6>
+						<ul>
+							<li>Crafted to order</li>
+							<li>Seasonal specials</li>
+							<li>Always fresh</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 
-      <article class="pm-card">
-        <h3 class="pm-card__title">Iced Vanilla Latte</h3>
-        <p class="pm-card__desc">Espresso, milk, and real vanilla. Not candy.</p>
-        <p class="pm-card__price">$6.00</p>
-      </article>
+			<section class="pm-section pm-catering">
+				<h1>Breakfast and Catering</h1>
+				<h3>
+					Feeding a team? We’ve got you. Treat your office to fresh pastries,
+					coffee, and breakfast platters, perfect for meetings, events, and
+					early starts.
+				</h3>
+				<div class="pm-catering-content">
+					<div class="pm-menu">
+						<img
+							src="./assets/img5.svg"
+							aria-label="delicious food"
+						/>
+						<img
+							src="./assets/img6.svg"
+							aria-label="delicious food"
+						/>
+						<img
+							src="./assets/img7.svg"
+							aria-label="delicious food"
+						/>
+					</div>
+				</div>
+			</section>
+			<section class="pm-section pm-order-online">
+				<h1>Order online. Pickup fresh at the counter</h1>
+				<h3>
+					Place your order online, swing by the counter, and you’re on your way.
+					Easy for locals, perfect for beach visitors, and ideal when time
+					matters.
+				</h3>
+				<div class="pm-order-online-content">
+					<img
+						src="./assets/img8.svg"
+						alt=""
+					/>
+					<a
+						class="pm-btn pm-btn--primary"
+						href="#"
+						>Order Online</a
+					>
+				</div>
+			</section>
+		</main>
 
-      <article class="pm-card">
-        <h3 class="pm-card__title">Caprese Toast</h3>
-        <p class="pm-card__desc">Tomato, basil, mozzarella, olive oil on sourdough.</p>
-        <p class="pm-card__price">$10.50</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="pm-section pm-catering" id="catering">
-    <div class="pm-catering__inner">
-      <h2 class="pm-section__title">Breakfast catering for nearby businesses</h2>
-      <p class="pm-catering__copy">
-        Coffee boxes, pastry assortments, and light bites. Easy ordering, reliable pickup or delivery.
-      </p>
-      <div class="pm-catering__ctas">
-        <a class="pm-btn pm-btn--primary" href="#">Request catering</a>
-        <a class="pm-btn pm-btn--ghost" href="#">See catering menu</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="pm-section pm-location" id="location">
-    <div class="pm-location__grid">
-      <div>
-        <h2 class="pm-section__title">Visit us in Cape May</h2>
-        <p class="pm-location__copy">Perfect for locals and beach visitors. Pickup at the counter.</p>
-        <dl class="pm-dl">
-          <div class="pm-dl__row"><dt>Hours</dt><dd>Mon–Sun · 7:00am – 3:00pm</dd></div>
-          <div class="pm-dl__row"><dt>Address</dt><dd>123 Ocean Ave, Cape May, NJ</dd></div>
-        </dl>
-        <a class="pm-link" href="#">Get directions</a>
-      </div>
-
-      <div class="pm-map" role="img" aria-label="Map preview showing Henrietta's Cafe in Cape May, New Jersey"></div>
-    </div>
-  </section>
-</main>
-
-<footer class="pm-footer">
-  <div class="pm-footer__inner">
-    <p class="pm-footer__brand">Henrietta’s Cafe</p>
-    <nav class="pm-footer__nav" aria-label="Footer">
-      <a href="#">Instagram</a>
-      <a href="#">Accessibility</a>
-      <a href="#">Privacy</a>
-    </nav>
-  </div>
-</footer>
-    
-</body>
+		<footer class="pm-footer">
+			<div class="pm-footer__inner">
+				<p class="pm-footer__brand">Henrietta’s Cafe</p>
+				<div>
+					<div>
+						<ul>
+							<li>Order Now</li>
+							<li>About</li>
+							<li>Catering</li>
+							<li>Menu</li>
+						</ul>
+					</div>
+          <div>
+						<ul>
+							<li>Order Now</li>
+							<li>About</li>
+							<li>Catering</li>
+							<li>Menu</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
