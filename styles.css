@@ -18,12 +18,19 @@
 	--shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Base */
-* { box-sizing: border-box; }
+/* ============ Base / Reset ============ */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
+	max-width: 100%;
+	overflow-x: hidden; /* evita “quebra” por overflow bobo */
 }
 
 body {
@@ -33,18 +40,24 @@ body {
 	line-height: 1.5;
 }
 
-img { display: block; max-width: 100%; }
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
 
-a { color: inherit; }
+a {
+	color: inherit;
+}
 
 .pm-container {
 	max-width: 1120px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 18px;
+	padding: 0 16px; /* 16 é mais seguro em 360px */
 }
 
-/* Header */
+/* ============ Header ============ */
 .pm-header {
 	position: sticky;
 	top: 0;
@@ -59,8 +72,10 @@ a { color: inherit; }
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 14px;
-	padding: 14px 18px;
+	gap: 12px;
+	padding: 14px 16px;
+	flex-wrap: wrap; /* IMPORTANT: não quebra no 360px */
+	row-gap: 10px;
 }
 
 .pm-logo img {
@@ -69,34 +84,45 @@ a { color: inherit; }
 }
 
 .pm-nav {
-	display: none;
-	gap: 1rem;
+	display: flex; /* você está usando “chips” no mobile */
+	gap: 8px;
+	flex-wrap: wrap;
 }
 
 @media (min-width: 860px) {
-	.pm-nav { display: flex; }
+	.pm-nav {
+		gap: 12px;
+	}
 }
 
 .pm-nav__link {
 	text-decoration: none;
 	opacity: 0.9;
 	font-weight: var(--fw-medium);
+	padding: 10px 12px;
+	border-radius: 10px;
+	border: 1px solid rgba(31, 41, 51, 0.18);
+	background: rgba(255, 255, 255, 0.35);
+	line-height: 1;
 }
 
 .pm-nav__link:hover,
 .pm-nav__link:focus-visible {
 	opacity: 1;
-	text-decoration: underline;
-	text-underline-offset: 4px;
+	text-decoration: none;
+	border-color: rgba(31, 41, 51, 0.32);
+	background: rgba(31, 41, 51, 0.04);
 }
 
 .pm-header__actions {
 	display: flex;
 	gap: 10px;
 	align-items: center;
+	margin-left: auto;
+	flex-wrap: nowrap;
 }
 
-/* Buttons */
+/* ============ Buttons ============ */
 .pm-btn {
 	display: inline-flex;
 	align-items: center;
@@ -136,7 +162,7 @@ a { color: inherit; }
 	background: rgba(31, 41, 51, 0.04);
 }
 
-/* Hero */
+/* ============ Hero ============ */
 .pm-hero--bg {
 	min-height: 92vh;
 	display: grid;
@@ -167,14 +193,14 @@ a { color: inherit; }
 	font-family: var(--font-hero-title);
 	font-weight: 500;
 	line-height: 1.05;
-	font-size: clamp(40px, 6.8vw, 72px);
+	font-size: clamp(38px, 7.2vw, 72px); /* mais seguro no 360 */
 }
 
 .pm-hero__sub {
 	margin: 0 auto 18px;
 	color: rgba(255, 255, 255, 0.92);
 	max-width: 60ch;
-	font-size: clamp(16px, 2.6vw, 22px);
+	font-size: clamp(15px, 2.8vw, 22px);
 }
 
 .pm-hero__ctas {
@@ -188,10 +214,10 @@ a { color: inherit; }
 .pm-hero__tagline {
 	margin: 0;
 	font-family: var(--font-hero-title);
-	font-size: clamp(16px, 2.2vw, 24px);
+	font-size: clamp(15px, 2.4vw, 24px);
 }
 
-/* Sections */
+/* ============ Sections ============ */
 .pm-section {
 	padding: 44px 0;
 }
@@ -200,7 +226,7 @@ a { color: inherit; }
 	margin: 0 0 10px;
 	font-family: var(--font-title);
 	font-weight: 800;
-	font-size: 28px;
+	font-size: clamp(22px, 3.2vw, 28px); /* responsivo de verdade */
 	letter-spacing: -0.01em;
 }
 
@@ -209,6 +235,7 @@ a { color: inherit; }
 	color: rgba(31, 41, 51, 0.85);
 	font-weight: var(--fw-regular);
 	max-width: 75ch;
+	font-size: 16px;
 }
 
 .pm-section__subtitle--about {
@@ -221,9 +248,10 @@ a { color: inherit; }
 	gap: 12px;
 	flex-wrap: wrap;
 	margin-top: 18px;
+	justify-content: center; /* mobile-friendly */
 }
 
-/* Featured / Menu sections */
+/* ============ Featured backgrounds ============ */
 .pm-featured {
 	background: var(--color-background-primary);
 }
@@ -234,7 +262,7 @@ a { color: inherit; }
 	align-items: center;
 }
 
-/* Menu gallery (desktop grid) */
+/* ============ Gallery (desktop grid) ============ */
 .pm-menu {
 	width: 100%;
 	display: grid;
@@ -261,13 +289,13 @@ a { color: inherit; }
 	.pm-menu {
 		grid-template-columns: none;
 		grid-auto-flow: column;
-		grid-auto-columns: min(78vw, 360px);
+		grid-auto-columns: min(78vw, 320px); /* 320 é mais estável no 360 */
 		overflow-x: auto;
 		overflow-y: hidden;
 		gap: 16px;
-		padding-inline: 18px;
+		padding-inline: 16px;
 		padding-bottom: 12px;
-		scroll-padding-inline: 18px;
+		scroll-padding-inline: 16px;
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
 	}
@@ -277,7 +305,7 @@ a { color: inherit; }
 	}
 }
 
-/* About */
+/* ============ About ============ */
 .pm-about {
 	background: var(--color-background-secondary);
 }
@@ -308,21 +336,18 @@ a { color: inherit; }
 .pm-list li {
 	margin: 10px 0;
 }
-.pm-about__content {
-	text-align: left;
-}
 
+/* Mobile: centraliza tudo no About */
 @media (max-width: 859px) {
 	.pm-about__inner {
-		justify-items: center; 
-		text-align: center;    
+		justify-items: center;
+		text-align: center;
 	}
 
 	.pm-about__content {
 		text-align: center;
-		max-width: 60ch;     
+		max-width: 60ch;
 	}
-
 
 	.pm-list {
 		display: inline-block;
@@ -337,7 +362,7 @@ a { color: inherit; }
 	}
 }
 
-
+/* ============ Catering & Order Online backgrounds ============ */
 .pm-catering {
 	background: var(--color-background-primary);
 }
@@ -360,7 +385,21 @@ a { color: inherit; }
 	padding: 18px 0;
 }
 
-/* Footer */
+/* Mobile: deixa order-online mais central e sem “espremido” */
+@media (max-width: 420px) {
+	.pm-order-online__inner {
+		text-align: center;
+		align-items: center;
+	}
+
+	.pm-order-online-content img {
+		width: 100%;
+		max-width: 280px;
+		margin: 0 auto;
+	}
+}
+
+/* ============ Footer ============ */
 .pm-footer {
 	background: var(--color-teal-soft);
 	padding: 28px 0;
