@@ -18,7 +18,7 @@
 	--shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* ============ Base / Reset ============ */
+
 *,
 *::before,
 *::after {
@@ -30,7 +30,7 @@ body {
 	margin: 0;
 	padding: 0;
 	max-width: 100%;
-	overflow-x: hidden; /* evita “quebra” por overflow bobo */
+	overflow-x: hidden; 
 }
 
 body {
@@ -54,10 +54,10 @@ a {
 	max-width: 1120px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 16px; /* 16 é mais seguro em 360px */
+	padding: 0 16px; 
 }
 
-/* ============ Header ============ */
+
 .pm-header {
 	position: sticky;
 	top: 0;
@@ -72,9 +72,9 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 12px;
-	padding: 14px 16px;
-	flex-wrap: wrap; /* IMPORTANT: não quebra no 360px */
+	gap: 10px;
+	padding: 12px;
+	flex-wrap: nowrap; 
 	row-gap: 10px;
 }
 
@@ -84,7 +84,7 @@ a {
 }
 
 .pm-nav {
-	display: flex; /* você está usando “chips” no mobile */
+	display: flex;
 	gap: 8px;
 	flex-wrap: wrap;
 }
@@ -93,17 +93,6 @@ a {
 	.pm-nav {
 		gap: 12px;
 	}
-}
-
-.pm-nav__link {
-	text-decoration: none;
-	opacity: 0.9;
-	font-weight: var(--fw-medium);
-	padding: 10px 12px;
-	border-radius: 10px;
-	border: 1px solid rgba(31, 41, 51, 0.18);
-	background: rgba(255, 255, 255, 0.35);
-	line-height: 1;
 }
 
 .pm-nav__link:hover,
@@ -122,7 +111,7 @@ a {
 	flex-wrap: nowrap;
 }
 
-/* ============ Buttons ============ */
+
 .pm-btn {
 	display: inline-flex;
 	align-items: center;
@@ -162,7 +151,7 @@ a {
 	background: rgba(31, 41, 51, 0.04);
 }
 
-/* ============ Hero ============ */
+
 .pm-hero--bg {
 	min-height: 92vh;
 	display: grid;
@@ -193,7 +182,7 @@ a {
 	font-family: var(--font-hero-title);
 	font-weight: 500;
 	line-height: 1.05;
-	font-size: clamp(38px, 7.2vw, 72px); /* mais seguro no 360 */
+	font-size: clamp(38px, 7.2vw, 72px); 
 }
 
 .pm-hero__sub {
@@ -217,7 +206,7 @@ a {
 	font-size: clamp(15px, 2.4vw, 24px);
 }
 
-/* ============ Sections ============ */
+
 .pm-section {
 	padding: 44px 0;
 }
@@ -226,7 +215,7 @@ a {
 	margin: 0 0 10px;
 	font-family: var(--font-title);
 	font-weight: 800;
-	font-size: clamp(22px, 3.2vw, 28px); /* responsivo de verdade */
+	font-size: clamp(22px, 3.2vw, 28px); 
 	letter-spacing: -0.01em;
 }
 
@@ -248,10 +237,10 @@ a {
 	gap: 12px;
 	flex-wrap: wrap;
 	margin-top: 18px;
-	justify-content: center; /* mobile-friendly */
+	justify-content: center; 
 }
 
-/* ============ Featured backgrounds ============ */
+
 .pm-featured {
 	background: var(--color-background-primary);
 }
@@ -262,7 +251,7 @@ a {
 	align-items: center;
 }
 
-/* ============ Gallery (desktop grid) ============ */
+
 .pm-menu {
 	width: 100%;
 	display: grid;
@@ -284,12 +273,12 @@ a {
 	object-fit: cover;
 }
 
-/* Mobile “carousel” (no JS) */
+
 @media (max-width: 860px) {
 	.pm-menu {
 		grid-template-columns: none;
 		grid-auto-flow: column;
-		grid-auto-columns: min(78vw, 320px); /* 320 é mais estável no 360 */
+		grid-auto-columns: min(78vw, 320px); 
 		overflow-x: auto;
 		overflow-y: hidden;
 		gap: 16px;
@@ -305,7 +294,7 @@ a {
 	}
 }
 
-/* ============ About ============ */
+
 .pm-about {
 	background: var(--color-background-secondary);
 }
@@ -337,7 +326,7 @@ a {
 	margin: 10px 0;
 }
 
-/* Mobile: centraliza tudo no About */
+
 @media (max-width: 859px) {
 	.pm-about__inner {
 		justify-items: center;
@@ -362,7 +351,7 @@ a {
 	}
 }
 
-/* ============ Catering & Order Online backgrounds ============ */
+
 .pm-catering {
 	background: var(--color-background-primary);
 }
@@ -385,7 +374,7 @@ a {
 	padding: 18px 0;
 }
 
-/* Mobile: deixa order-online mais central e sem “espremido” */
+
 @media (max-width: 420px) {
 	.pm-order-online__inner {
 		text-align: center;
@@ -399,7 +388,7 @@ a {
 	}
 }
 
-/* ============ Footer ============ */
+
 .pm-footer {
 	background: var(--color-teal-soft);
 	padding: 28px 0;
