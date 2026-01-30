@@ -1,124 +1,92 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="top">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;500&family=Poppins:wght@400;500;700&family=Ysabeau+SC:wght@400;600;800&display=swap"
 			rel="stylesheet"
-			href="styles.css"
 		/>
-		<title>Harietta's Cafe</title>
+		<link rel="stylesheet" href="./styles.css" />
+
+		<title>Henrietta’s Cafe</title>
 	</head>
+
 	<body>
 		<header class="pm-header">
-			<div class="pm-header__inner">
-				<a
-					class="pm-logo"
-					aria-label="Henrietta's Cafe home"
-				>
-					<img
-						src="./assets/logo.svg"
-						alt="Henrietta's Cafe"
-					/>
+			<div class="pm-header__inner pm-container">
+				<a class="pm-logo" href="#top" aria-label="Henrietta's Cafe home">
+					<img src="./assets/logo.svg" alt="Henrietta's Cafe" />
 				</a>
 
-				<nav
-					class="pm-nav"
-					aria-label="Primary"
-				>
-					<a
-						class="pm-btn pm-btn--primary"
-						href="#catering"
-						>Order now</a
-					>
-					<a
-						class="pm-btn pm-btn--primary"
-						href="#order"
-						>Cataring</a
-					>
-					<a
-						class="pm-btn pm-btn--primary"
-						href="#order"
-						>About</a
-					>
-				</nav>
+				
+
+				<div class="pm-header__actions">
+					<a class="pm-btn pm-btn--ghost" href="#menu">Menu</a>
+					<a class="pm-btn pm-btn--ghost" href="#about">About</a>
+					<a class="pm-btn pm-btn--ghost" href="#catering">Catering</a>
+					<a class="pm-btn pm-btn--primary" href="#order">Order now</a>
+				</div>
 			</div>
 		</header>
 
 		<main class="pm-main">
-			<section
-				class="pm-hero pm-hero--bg"
-				id="order"
-			>
-				<div class="pm-hero__content">
-					<h1 class="pm-hero__title">Welcome to</h1>
-					<h1 class="pm-hero__title">Welcome to Henrietta’s Cafe</h1>
+			<!-- HERO -->
+			<section class="pm-hero pm-hero--bg" id="order" aria-label="Hero">
+				<div class="pm-hero__content pm-container">
+					<p class="pm-hero__kicker">Welcome to</p>
+					<h1 class="pm-hero__title">Henrietta’s Cafe</h1>
+
 					<p class="pm-hero__sub">
-						Coffee, baked goods, and light bites. Pick up at the counter in
-						minutes.
+						Coffee, baked goods, and light bites. Pick up at the counter in minutes.
 					</p>
 
 					<div class="pm-hero__ctas">
-						<h2 class="pm-hero__sub">Delicious Food in Charming Cape, NJ</h2>
-						<a
-							class="pm-btn pm-btn--primary"
-							href="#"
-							>Order Online</a
-						>
+						<p class="pm-hero__tagline">Delicious food in charming Cape May, NJ</p>
+						<a class="pm-btn pm-btn--primary" href="#">Order Online</a>
 					</div>
 				</div>
 			</section>
 
-			<section
-				class="pm-section pm-featured"
-				id="menu"
-			>
-				<div class="pm-featured-content">
-					<h1 class="pm-section__title">Breakfast and Lunch Favorites</h1>
-					<h3 class="pm-section__subtitle">
-						Start your morning with fresh-baked pastries and a coffee that
-						actually tastes like coffee. Swing back at lunch for light bites
-						that feel satisfying without slowing you down.
-					</h3>
+			<!-- MENU -->
+			<section class="pm-section pm-featured" id="menu">
+				<div class="pm-container pm-featured-content">
+					<h2 class="pm-section__title">Breakfast and Lunch Favorites</h2>
+					<p class="pm-section__subtitle">
+						Start your morning with fresh-baked pastries and coffee that actually tastes
+						like coffee. Swing back at lunch for light bites that feel satisfying
+						without slowing you down.
+					</p>
 
-					<div class="pm-menu">
-						<img
-							src="./assets/img1.svg"
-							aria-label="delicious food"
-						/>
-						<img
-							src="./assets/img2.svg"
-							aria-label="delicious food"
-						/>
-						<img
-							src="./assets/img3.svg"
-							aria-label="delicious food"
-						/>
-						<img
-							src="./assets/img4.svg"
-							aria-label="delicious food"
-						/>
+					<div class="pm-menu" aria-label="Menu gallery">
+						<div class="pm-menu__item"><img src="./assets/img1.svg" alt="Menu item 1" /></div>
+						<div class="pm-menu__item"><img src="./assets/img2.svg" alt="Menu item 2" /></div>
+						<div class="pm-menu__item"><img src="./assets/img3.svg" alt="Menu item 3" /></div>
+						<div class="pm-menu__item"><img src="./assets/img4.svg" alt="Menu item 4" /></div>
 					</div>
 				</div>
 			</section>
 
-			<section class="pm-section pm-about">
-				<h1>Love in our coffee</h1>
-				<div class="pm-about-content">
-					<div>
-						<img src="./assets/aboutUs.svg" />
+			<!-- ABOUT -->
+			<section class="pm-section pm-about" id="about">
+				<div class="pm-container pm-about__inner">
+					<div class="pm-about__media">
+						<img src="./assets/aboutUs.svg" alt="Cafe interior illustration" />
 					</div>
-					<div class="pm-about-content-text">
-						<h6>
-							We keep it simple and obsess over the details: smooth espresso,
-							balanced brews, and seasonal specials that taste like Cape May
-							mornings. Whether you’re grabbing a quick pickup or lingering for
-							a moment, you’ll feel the difference.
-						</h6>
-						<ul>
+
+					<div class="pm-about__content">
+						<h2 class="pm-section__title">Love in our coffee</h2>
+						<p class="pm-section__subtitle pm-section__subtitle--about">
+							We keep it simple and obsess over the details: smooth espresso, balanced
+							brews, and seasonal specials that taste like Cape May mornings. Whether
+							you’re grabbing a quick pickup or lingering for a moment, you’ll feel the
+							difference.
+						</p>
+
+						<ul class="pm-list">
 							<li>Crafted to order</li>
 							<li>Seasonal specials</li>
 							<li>Always fresh</li>
@@ -127,72 +95,58 @@
 				</div>
 			</section>
 
-			<section class="pm-section pm-catering">
-				<h1>Breakfast and Catering</h1>
-				<h3>
-					Feeding a team? We’ve got you. Treat your office to fresh pastries,
-					coffee, and breakfast platters, perfect for meetings, events, and
-					early starts.
-				</h3>
-				<div class="pm-catering-content">
-					<div class="pm-menu">
-						<img
-							src="./assets/img5.svg"
-							aria-label="delicious food"
-						/>
-						<img
-							src="./assets/img6.svg"
-							aria-label="delicious food"
-						/>
-						<img
-							src="./assets/img7.svg"
-							aria-label="delicious food"
-						/>
+			<!-- CATERING -->
+			<section class="pm-section pm-catering" id="catering">
+				<div class="pm-container pm-featured-content">
+					<h2 class="pm-section__title">Breakfast and Catering</h2>
+					<p class="pm-section__subtitle">
+						Feeding a team? We’ve got you. Treat your office to fresh pastries, coffee,
+						and breakfast platters, perfect for meetings, events, and early starts.
+					</p>
+
+					<div class="pm-menu" aria-label="Catering gallery">
+						<div class="pm-menu__item"><img src="./assets/img9.svg" alt="Catering option 1" /></div>
+						<div class="pm-menu__item"><img src="./assets/img5.svg" alt="Catering option 2" /></div>
+						<div class="pm-menu__item"><img src="./assets/img6.svg" alt="Catering option 3" /></div>
+						<div class="pm-menu__item"><img src="./assets/img7.svg" alt="Catering option 4" /></div>
+					</div>
+
+					<div class="pm-section__cta">
+						<a class="pm-btn pm-btn--primary" href="#">Request catering</a>
+						<a class="pm-btn pm-btn--ghost" href="#">See catering menu</a>
 					</div>
 				</div>
 			</section>
-			<section class="pm-section pm-order-online">
-				<h1>Order online. Pickup fresh at the counter</h1>
-				<h3>
-					Place your order online, swing by the counter, and you’re on your way.
-					Easy for locals, perfect for beach visitors, and ideal when time
-					matters.
-				</h3>
-				<div class="pm-order-online-content">
-					<img
-						src="./assets/img8.svg"
-						alt=""
-					/>
-					<a
-						class="pm-btn pm-btn--primary"
-						href="#"
-						>Order Online</a
-					>
+
+			<!-- ORDER ONLINE -->
+			<section class="pm-section pm-order-online" id="pickup">
+				<div class="pm-container pm-order-online__inner">
+					<h2 class="pm-section__title">Order online. Pickup fresh at the counter.</h2>
+					<p class="pm-section__subtitle">
+						Place your order online, swing by the counter, and you’re on your way.
+						Easy for locals, perfect for beach visitors, and ideal when time matters.
+					</p>
+
+					<div class="pm-order-online-content">
+						<img src="./assets/img8.svg" alt="Order online illustration" />
+						<a class="pm-btn pm-btn--primary" href="#">Order Online</a>
+					</div>
 				</div>
 			</section>
 		</main>
 
 		<footer class="pm-footer">
-			<div class="pm-footer__inner">
+			<div class="pm-container pm-footer__inner">
 				<p class="pm-footer__brand">Henrietta’s Cafe</p>
-				<div>
-					<div>
-						<ul>
-							<li>Order Now</li>
-							<li>About</li>
-							<li>Catering</li>
-							<li>Menu</li>
-						</ul>
-					</div>
-          <div>
-						<ul>
-							<li>Order Now</li>
-							<li>About</li>
-							<li>Catering</li>
-							<li>Menu</li>
-						</ul>
-					</div>
-				</div>
+
+				<nav class="pm-footer__nav" aria-label="Footer">
+					<a href="#order">Order</a>
+					<a href="#menu">Menu</a>
+					<a href="#about">About</a>
+					<a href="#catering">Catering</a>
+				</nav>
+
+				<p class="pm-footer__copy">© 2026 Henrietta’s Cafe</p>
 			</div>
 		</footer>
 	</body>
