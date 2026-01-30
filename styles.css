@@ -308,8 +308,36 @@ a { color: inherit; }
 .pm-list li {
 	margin: 10px 0;
 }
+.pm-about__content {
+	text-align: left;
+}
 
-/* Catering / Order sections backgrounds */
+@media (max-width: 859px) {
+	.pm-about__inner {
+		justify-items: center; 
+		text-align: center;    
+	}
+
+	.pm-about__content {
+		text-align: center;
+		max-width: 60ch;     
+	}
+
+
+	.pm-list {
+		display: inline-block;
+		text-align: left;
+		margin: 14px auto 0;
+		padding-left: 18px;
+	}
+
+	.pm-about__media {
+		width: 100%;
+		max-width: 520px;
+	}
+}
+
+
 .pm-catering {
 	background: var(--color-background-primary);
 }
